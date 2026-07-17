@@ -9,6 +9,8 @@
     let diemLop = [7, 9, 4, 8, 6, 10, 3, 5];
     //số lượng học viên trên lớp
     let soLuong = diemLop.length
+    console.log("số lượng học viên: " + soLuong);
+
 
     // tổng và điểm trung bình của lớp
     let tongDiem = 0;
@@ -16,13 +18,35 @@
         tongDiem += diemLop[i];
     }
     let diemTrungBinh = tongDiem / soLuong
+    console.log("tổng điểm: " + tongDiem);
+    console.log("diểm trung bình: " + diemTrungBinh);
+
+
+
 
     // Điểm cao nhất và điểm thấp nhất.
     let diemMin= diemLop[0];
     let diemMax = diemLop[0];
     for (let i = 1; i < diemLop.length; i++) {
-        if ()
+        if (diemLop[i] <diemMin) {
+            diemMin = diemLop[i];
+        }
+        if (diemLop[i] > diemMax) {
+            diemMax = diemLop[i];
+        }
     }
+    console.log("điểm min: " + diemMin);
+    console.log("diêm max: " + diemMax);
+
+
+    // số học viên đạt trên 5
+    let soHocVienDat= 0;
+    for (let i = 0; i < diemLop.length; i++) {
+        if (diemLop[i] >= 5) {
+            soHocVienDat++;
+        }
+    }
+    console.log("số học viên dạt: " + soHocVienDat)
 </script>
 </body>
 </html>
